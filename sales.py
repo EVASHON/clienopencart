@@ -23,3 +23,7 @@ class BlockSalesTab:
         cursor.execute(query, (user_id,))
         self.db.commit()
         
+        self.block_sales_result_label.config(text=f"Ventes bloquer pour l'utilisateur: {user_id}")
+        cursor.close()
+
+        
